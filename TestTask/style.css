@@ -1,0 +1,65 @@
+* {
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+form{
+   display: flex;
+   justify-content: center;
+}
+
+#errorEmail, #errorPsw, #errorRptPsw{
+	color: red;
+	font-size: 1em;
+	font-family: cursive;
+}
+.container {
+	flex-direction: column;
+   padding: 1em;
+   display: flex;
+   align-items: flex-start;
+}
+
+input[type=text], input[type=password] {
+	width: 30em;
+	padding: 1em;
+	margin: 0.4em 0 0.7em 0;
+	display: flex;
+	border: none;
+	background: #e5e8f5;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+	background-color: #fffacd;
+	outline: none;
+}
+
+hr {
+	border: 1px solid black;
+	width: 25em;
+}
+
+.regbtn {
+	background-color: #2f4569;
+	color: white;
+	padding: 1em;
+	margin:0;
+	border: none;
+	cursor: pointer;
+	width: 30em;
+	opacity: 0.85;
+}
+
+.regbtn:hover, .changeBgr:hover {
+	opacity:1;
+}
+
+.changeBgr {
+	background-color: #151a21;
+	color: white;
+	padding: 1em;
+	margin-top: 1em;
+	border: none;
+	cursor: pointer;
+	width: 30em;
+	opacity: 0.85;
+}

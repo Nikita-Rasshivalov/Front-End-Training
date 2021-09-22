@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<script src="scripts.js" async></script>
+	<title>Registration</title>
+</head>
+<body onload="changeBackground()">
+	<form onSubmit="return false;">
+		<div class="container">
+			<h1>Registration</h1>
+			<span>Please fill out the registration form to create an account.</span>
+			
+			<hr>
+			<label for="name"><span>Name</span></label>
+			<input type="text" placeholder="Name" id="name" required >
+
+			<label for="email"><span>Email</span></label>
+			<input type="text" placeholder="Email" id="email" required>
+			<div id="errorEmail"></div>
+
+			<label for="psw"><span>Password</span></label>
+			<input type="password" placeholder="Password" id="psw" required>
+			<div id="errorPsw"></div>
+
+			<label for="rpsw"><span>Repeat Password</span></label>
+			<input type="password" placeholder="Repeat Password" id="rpsw" required>
+			<div id="errorRptPsw"></div>
+			<hr>
+
+			<button type="submit" class="regbtn" onclick="main()">Registration</button>
+			<button type="button" class="changeBgr" onclick="changeBackground()">Change background</button>
+		</div>
+	</form>
+</body>
+</html>
