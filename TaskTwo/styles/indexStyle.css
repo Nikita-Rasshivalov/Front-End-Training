@@ -1,0 +1,38 @@
+/*setting styles for main page*/
+.container {
+    background: #9580a8;
+    margin: 2px 90px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.simpleText {
+    width: 400px;
+    padding: 8px 5px 9px;
+    display: inline-block;
+    font-family: sans-serif;
+    text-align: justify;
+    border: 1px solid #77608d;
+    border-top:none ;
+    border-bottom: none;
+}
+
+h2 {
+    margin-top: 2px;
+    font-family: Arial;
+    font-size: 22px;
+    line-height: 25px;
+    font-weight: 400;
+    text-shadow:
+        -1px -1px #000,
+        0 1px 0 #444;
+    color: #fff;
+    transition: all 1s;
+}
+
+h2:hover {
+    text-shadow:
+        -1px -1px #000,
+        0 1px 0 #444;
+    color: #1A1A1A;
+}
