@@ -42,7 +42,7 @@
         0 1px 0 #444;
     color: #fff;
 }
-/*Using media queris*/
+/*Using media queries*/
 @media only screen and (max-width: 1270px) {
 
     .textInfo,

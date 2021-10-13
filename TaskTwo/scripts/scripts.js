@@ -1,10 +1,9 @@
-/*function to change table properties
-params: (value) the received value by pressing the button
+/*function to change table properties.
+params(value): the received value by pressing the button
 */
 function changeTable(value) {
     const table = document.getElementById('tableForChange');
     const buttons = document.querySelectorAll('[type="button"]');
-
     switch (value) {
         case 'style 1':
             table.style.fontFamily = 'Arial';
