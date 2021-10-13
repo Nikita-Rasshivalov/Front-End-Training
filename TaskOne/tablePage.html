@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Using CSS and setting icon for title -->
     <link rel="stylesheet" href="styles/style.css">
     <link rel="shortcut icon" href="icons/icon.svg">
     <link rel="stylesheet" href="styles/table.Styles.css">
     <script src="/scripts/scripts.js"></script>
     <title>Table page</title>
 </head>
+
 <body>
+    <!-- Wrapper -->
     <div class="wrapper">
+        <!--  Page header -->
         <header class="header">
             <span>
                 <p>Simple using of HTML5 CSS3 and a little bit JS for layout</p>
@@ -20,7 +23,9 @@
                 <img src="https://img.icons8.com/color/30/000000/javascript--v1.png" />
             </span>
         </header>
+        <!-- Main part of page -->
         <main class="main">
+            <!-- Menu -->
             <div class="menu">
                 <ul>
                     <li><a href="/index.html">Home</a></li>
@@ -29,6 +34,7 @@
                 </ul>
             </div>
             <div class="container">
+                <!-- Table with different settings for the table style  -->
                 <table id="tableForChange">
                     <tr>
                         <th>
@@ -93,8 +99,10 @@
                 </table>
             </div>
         </main>
+        <!-- Page footer -->
         <footer class="footer">
             <div class="infoAboutSite">
+                <!-- Using a script to get today's date -->
                 <script>
                 var version = "1.0.1"
                 document.write(new Date().toLocaleDateString() +

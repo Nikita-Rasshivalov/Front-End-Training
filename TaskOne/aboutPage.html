@@ -1,59 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="styles/style.css">
-   <link rel="stylesheet" href="styles/aboutPageStyle.css">
-   <link rel="shortcut icon" href="icons/icon.svg" >
-   <title>About page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Using CSS and setting icon for title -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/aboutPageStyle.css">
+    <link rel="shortcut icon" href="icons/icon.svg">
+    <title>About page</title>
 </head>
+
 <body>
-   <div class="wrapper">
-      <header class="header">
-         <span>
-            <p>Simple using of HTML5 CSS3 and a little bit JS for layout</p>
-            <img src="https://img.icons8.com/color/30/000000/html-5--v1.png"/>
-            <img src="https://img.icons8.com/color/30/000000/css3.png"/>
-            <img src="https://img.icons8.com/color/30/000000/javascript--v1.png"/>
-         </span>
-      </header>
-      <main class="main">
-         <div class="menu">
-            <ul>
-               <li><a href="/index.html">Home</a></li>
-               <li><a href="/tablePage.html">Table</a></li>
-               <li><a href="/aboutPage.html">About</a></li>
-            </ul>
-         </div>
+    <!-- Wrapper -->
+    <div class="wrapper">
+        <!-- Page header -->
+        <header class="header">
+            <span>
+                <p>Simple using of HTML5 CSS3 and a little bit JS for layout</p>
+                <img src="https://img.icons8.com/color/30/000000/html-5--v1.png" />
+                <img src="https://img.icons8.com/color/30/000000/css3.png" />
+                <img src="https://img.icons8.com/color/30/000000/javascript--v1.png" />
+            </span>
+        </header>
+        <!-- Main part of page -->
+        <main class="main">
+            <div class="menu">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/tablePage.html">Table</a></li>
+                    <li><a href="/aboutPage.html">About</a></li>
+                </ul>
+            </div>
+            <!-- Container for information about author -->
             <div class="container">
                 <div class="authorClassImg"><img src="images/author.jpg" alt="author"></div>
                 <div class="infoAboutAuthor">
-                  <div class="textInfo">
+                    <div class="textInfo">
                         Hi, My name is Nikita Rasshivalov and I'm 20 years old.
-                        I study at Sukhoi university on the Automatic and Information Systems faculty 
-                        for a specialty programmer system engineer.Not so long ago, I switched to the 3rd 
+                        I study at Sukhoi university on the Automatic and Information Systems faculty
+                        for a specialty programmer system engineer.Not so long ago, I switched to the 3rd
                         year and continue to do what I love - writing software and doing web development.
                         At the moment I am engaged in trainings on the Front-End in EPAM Systems.
-               </div>
-                  <div class="contactAutor">
+                    </div>
+                    <div class="contactAutor">
                         Contact with the author:<br>
                         Email:<a href="mailto:nikita_3121@mail.ru" class="EmailInf">nikita_3121@mail.ru</a><br>
                         Skype:<a href="#" class="SkypeInf">nikita_rash_15</a><br>
-                        Twitter:<a href="#" class="TwitterInf">nik_1293</a> 
-                  </div>
+                        Twitter:<a href="#" class="TwitterInf">nik_1293</a>
+                    </div>
                 </div>
             </div>
-      </main>
-      <footer class="footer"> 
-         <div class="infoAboutSite">
-            <script>
-               var version = "1.0.1"
-               document.write(new Date().toLocaleDateString() + 
-                  " Created by Rasshivalov Nikita (ITP-31 GSTU). Site virsion:"+ version);
-            </script>
-         </div>
-      </footer>
-   </div>
+        </main>
+        <!-- Page footer -->
+        <footer class="footer">
+            <div class="infoAboutSite">
+               <!-- Using a script to get today's date -->
+                <script>
+                var version = "1.0.1"
+                document.write(new Date().toLocaleDateString() +
+                    " Created by Rasshivalov Nikita (ITP-31 GSTU). Site virsion:" + version);
+                </script>
+            </div>
+        </footer>
+    </div>
 </body>
+
 </html>

@@ -43,7 +43,7 @@
         0 1px 0 #444;
     color: #fff;
 }
-
+/*Use media querie for changing page */
 @media only screen and (max-width: 1270px) {
 
     .textInfo,
