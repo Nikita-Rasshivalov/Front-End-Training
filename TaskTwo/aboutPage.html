@@ -33,21 +33,22 @@
                     <li><a href="/aboutPage.html">About</a></li>
                 </ul>
             </nav>
-            <div class="container">
-                <div class="authorClassImg"><img src="images/author.jpg" alt="author"></div>
+            <div class="container" itemscope itemtype="https://schema.org/Person">
+                <div class="authorClassImg"><img src="images/author.jpg" itemprop="image" alt="author"></div>
                 <article class="infoAboutAuthor">
                     <section class="textInfo">
-                        Hi, My name is Nikita Rasshivalov and I'm 20 years old.
-                        I study at Sukhoi university on the Automatic and Information Systems faculty
-                        for a specialty programmer system engineer.Not so long ago, I switched to the 3rd
-                        year and continue to do what I love - writing software and doing web development.
-                        At the moment I am engaged in trainings on the Front-End in EPAM Systems.
+                        Hi, My name is <span itemprop="name"> Nikita Rasshivalov</span> and I'm 20 years old.
+                        <span itemprop="jobTitle">
+                            I study at Sukhoi university on the Automatic and Information Systems faculty
+                            for a specialty programmer system engineer.</span>
+                        Not so long ago, I switched to the 3rd year and continue to do what I love - writing software
+                        and doing web development. At the moment I am engaged in trainings on the Front-End in EPAM Systems.
                     </section>
-                    <section class="contactAutor">
+                    <section class="contactAutor" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
                         Contact with the author:<br>
-                        Email:<a href="mailto:nikita_3121@mail.ru" class="EmailInf">nikita_3121@mail.ru</a><br>
-                        Skype:<a href="#" class="SkypeInf">nikita_rash_15</a><br>
-                        Twitter:<a href="#" class="TwitterInf">nik_1293</a>
+                        Email:<a href="mailto:nikita_3121@mail.ru" itemprop="email" class="EmailInf">nikita_3121@mail.ru</a><br>
+                        Skype:<a href="#" class="SkypeInf" itemprop="email">nikita_rash_15</a><br>
+                        Twitter:<a href="#" class="TwitterInf" itemprop="email">nik_1293</a>
                     </section>
                 </article>
             </div>
