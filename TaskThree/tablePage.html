@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Using  styles and icons -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="icons/icon.svg">
+    <link rel="stylesheet" href="styles/table.Styles.css">
+    <script src="/scripts/scripts.js"></script>
+    <title>Table page</title>
+</head>
+
+<body>
+    <!-- Wrapper -->
+    <div class="wrapper">
+        <!-- Header page -->
+        <header class="header">
+            <span>
+                <p>Simple using of HTML5 CSS3 and a little bit JS for layout</p>
+                <img src="https://img.icons8.com/color/30/000000/html-5--v1.png" />
+                <img src="https://img.icons8.com/color/30/000000/css3.png" />
+                <img src="https://img.icons8.com/color/30/000000/javascript--v1.png" />
+            </span>
+        </header>
+        <!-- Main part of page -->
+        <main class="main">
+            <!-- Menu -->
+            <nav class="menu">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/tablePage.html">Table</a></li>
+                    <li><a href="/aboutPage.html">About</a></li>
+                </ul>
+            </nav>
+            <div class="container">
+                <table id="tableForChange">
+                    <tr>
+                        <th>
+                            Change style
+                        </th>
+                        <td>
+                            <form>
+                                <input type="button" value="style 1" onclick="changeTable(this.value)">
+                            </form>
+                        </td>
+                        <td>
+                            <form>
+                                <input type="button" value="style 2" onclick="changeTable(this.value)">
+                            </form>
+                        </td>
+                        <td>
+                            <form>
+                                <input type="button" value="style 3" onclick="changeTable(this.value)">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Change height
+                        </th>
+                        <td>
+                            <form>
+                                <input type="button" value="300px" onclick="changeTable(this.value)">
+                            </form>
+                        </td>
+                        <td>
+                            <form>
+                                <input type="button" value="200px" onclick="changeTable(this.value)">
+                            </form>
+                        </td>
+                        <td>
+                            <form>
+                                <input type="button" value="100px" onclick="changeTable(this.value)">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Change border
+                        </th>
+                        <td>
+                            <form>
+                                <input type="button" value="solid" onclick="changeTable(this.value)">
+                            </form>
+                        </td>
+                        <td>
+                            <form>
+                                <input type="button" value="dotted" onclick="changeTable(this.value)">
+                            </form>
+                        </td>
+                        <td>
+                            <form>
+                                <input type="button" value="ridge" onclick="changeTable(this.value)">
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+        <!-- Page footer -->
+        <footer class="footer">
+            <div class="infoAboutSite">
+                <!-- Using script for getting today's date -->
+                <script>
+                var version = "1.0.1"
+                document.write(new Date().toLocaleDateString() +
+                    " Created by Rasshivalov Nikita (ITP-31 GSTU). Site virsion:" + version);
+                </script>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
