@@ -1,75 +1,39 @@
 /*setting styles for aboutPage*/
 .container {
     background: #9580a8;
-    margin: 2px 90px auto;
-    display: flex;
-    flex: 1 1 auto;
-    padding: auto;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items:center;
+    grid-template: 1fr/ minmax(auto,600px) minmax(auto,600px) ;
+    padding: 20px 20px;
 }
-
-.authorClassImg {
-    width: 50%;
-}
-
-.infoAboutAuthor {
-    width: 50%;
-    margin: 2em 0 0 0;
-}
-
-.authorClassImg img {
-    width: 65%;
-    border: 3px solid #fff;
-    display: block;
-    margin: 2em 5em;
+.authorClassImg > img{
+    width: 420px;
+    border: #b2a4e7 solid 2px;
 }
 
 .textInfo,
 .contactAutor {
     font-family: revert;
-    font-size: 33px;
-    margin-bottom: 1em;
+    font-size: 32px;
+    text-align: justify;
+    color:#f3cafd;
 }
 
 .contactAutor a {
-    color: #000;
+    color: #b2a4e7;
     text-decoration: none;
 }
 
-
 .contactAutor a:hover {
     text-shadow:
-        -1px -1px #000,
+        0px 0px #5f4d71,
         0 1px 0 #444;
-    color: #fff;
+    color: #5f4d71;
 }
-/*Using media queries*/
-@media only screen and (max-width: 1270px) {
 
-    .textInfo,
-    .contactAutor {
-        font-family: sans-serif;
-        font-size: 20px;
-        margin-bottom: 1em;
-    }
-
-    .container {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .infoAboutAuthor {
-        margin-top: auto;
-        width: auto;
-    }
-
-    .authorClassImg {
-        width: auto;
-        margin: 1em;
-    }
-
-    .authorClassImg img {
-        width: 60%;
-        margin: auto;
-    }
-
+.authorClassImg{
+    display: grid;
+    justify-content: center;
 }

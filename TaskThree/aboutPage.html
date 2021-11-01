@@ -1,70 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Using styles and icons -->
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/aboutPageStyle.css">
-    <link rel="shortcut icon" href="icons/icon.svg">
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/aboutPageStyle.css" />
+    <link rel="shortcut icon" href="icons/icon.svg" />
     <title>About page</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Wrapper -->
     <div class="wrapper">
-        <!-- Header page -->
-        <header class="header">
-            <span>
-                <p>Simple using of HTML5 CSS3 and a little bit JS for layout</p>
-                <img src="https://img.icons8.com/color/30/000000/html-5--v1.png" />
-                <img src="https://img.icons8.com/color/30/000000/css3.png" />
-                <img src="https://img.icons8.com/color/30/000000/javascript--v1.png" />
-            </span>
-        </header>
-        <!-- Main part of page -->
-        <main class="main">
-            <!-- Menu -->
-            <nav class="menu">
-                <ul>
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/tablePage.html">Table</a></li>
-                    <li><a href="/aboutPage.html">About</a></li>
-                </ul>
-            </nav>
-            <div class="container" itemscope itemtype="https://schema.org/Person">
-                <div class="authorClassImg"><img src="images/author.jpg" itemprop="image" alt="author"></div>
-                <article class="infoAboutAuthor">
-                    <section class="textInfo">
-                        Hi, My name is <span itemprop="name"> Nikita Rasshivalov</span> and I'm 20 years old.
-                        <span itemprop="jobTitle">
-                            I study at Sukhoi university on the Automatic and Information Systems faculty
-                            for a specialty programmer system engineer.</span>
-                        Not so long ago, I switched to the 3rd year and continue to do what I love - writing software
-                        and doing web development. At the moment I am engaged in trainings on the Front-End in EPAM Systems.
-                    </section>
-                    <section class="contactAutor" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-                        Contact with the author:<br>
-                        Email:<a href="mailto:nikita_3121@mail.ru" itemprop="email" class="EmailInf">nikita_3121@mail.ru</a><br>
-                        Skype:<a href="#" class="SkypeInf" itemprop="email">nikita_rash_15</a><br>
-                        Twitter:<a href="#" class="TwitterInf" itemprop="email">nik_1293</a>
-                    </section>
-                </article>
-            </div>
-        </main>
-        <!-- Page footer -->
-        <footer class="footer">
-            <div class="infoAboutSite">
-                <!-- Using script for getting today's date -->
-                <script>
-                var version = "1.0.1"
-                document.write(new Date().toLocaleDateString() +
-                    " Created by Rasshivalov Nikita (ITP-31 GSTU). Site virsion:" + version);
-                </script>
-            </div>
-        </footer>
+      <!-- Header page -->
+      <header class="header">
+        <div class="header_info">
+          <p>Simple using of HTML5 CSS3 and a little bit JS for layout</p>
+          <img src="https://img.icons8.com/color/30/000000/html-5--v1.png" />
+          <img src="https://img.icons8.com/color/30/000000/css3.png" />
+          <img
+            src="https://img.icons8.com/color/30/000000/javascript--v1.png"
+          />
+        </div>
+        <!-- Menu -->
+        <aside class="sidebar">
+          <nav class="sidebar_menu">
+            <ul class="sidebar_list">
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/tablePage.html">Table</a></li>
+              <li><a href="/aboutPage.html">About</a></li>
+            </ul>
+          </nav>
+        </aside>
+      </header>
+      <!-- Main part of page -->
+      <main class="main">
+        <div class="container" itemscope itemtype="https://schema.org/Person">
+          <div class="authorClassImg">
+            <img src="images/author.jpg" itemprop="image" alt="author" />
+          </div>
+          <article class="infoAboutAuthor">
+            <section class="textInfo">
+              Hi, My name is
+              <span itemprop="name"> Nikita Rasshivalov</span> and I'm 20 years
+              old.
+              <span itemprop="jobTitle">
+                I study at Sukhoi university on the Automatic and Information
+                Systems faculty for a specialty programmer system
+                engineer.</span
+              >
+              Not so long ago, I switched to the 3rd year and continue to do
+              what I love - writing software and doing web development. At the
+              moment I am engaged in trainings on the Front-End in EPAM Systems.
+            </section>
+            <section
+              class="contactAutor"
+              itemprop="address"
+              itemscope
+              itemtype="https://schema.org/PostalAddress"
+            >
+              Contact with the author:<br />
+              Email:<a
+                href="mailto:nikita_3121@mail.ru"
+                itemprop="email"
+                class="EmailInf"
+                >nikita_3121@mail.ru</a
+              ><br />
+              Skype:<a href="#" class="SkypeInf" itemprop="email"
+                >nikita_rash_15</a
+              ><br />
+              Twitter:<a href="#" class="TwitterInf" itemprop="email"
+                >nik_1293</a
+              >
+            </section>
+          </article>
+        </div>
+      </main>
+      <!-- Page footer -->
+      <footer class="footer">
+        <div class="infoAboutSite">
+          <!-- Using script for getting today's date -->
+          <script src="/scripts/GetDate.js"></script>
+        </div>
+      </footer>
     </div>
-</body>
-
+  </body>
 </html>

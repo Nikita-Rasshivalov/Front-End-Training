@@ -1,20 +1,24 @@
-/*setting styles for main page*/
+/* setting styles for main page */
 .container {
     background: #9580a8;
-    margin: 2px 90px auto;
-    display: flex;
+    display: grid;
     justify-content: center;
+    grid-template: 1fr / minmax(auto, 400px) minmax(auto, 400px) minmax(auto, 400px);
+    padding: 0 1em;
 }
 
 .simpleText {
-    width: 400px;
     padding: 8px 5px 9px;
-    display: inline-block;
     font-family: sans-serif;
-    text-align: justify;
     border: 1px solid #77608d;
     border-top:none ;
     border-bottom: none;
+    text-align: justify;
+    font-size: 16px;
+}
+
+.simpleText span{
+    color: #f3cafd;
 }
 
 h2 {
@@ -34,5 +38,5 @@ h2:hover {
     text-shadow:
         -1px -1px #000,
         0 1px 0 #444;
-    color: #1A1A1A;
+    color: #c18acf;
 }
