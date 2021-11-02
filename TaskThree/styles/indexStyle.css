@@ -1,42 +1,97 @@
 /* setting styles for main page */
 .container {
-    background: #9580a8;
-    display: grid;
-    justify-content: center;
-    grid-template: 1fr / minmax(auto, 400px) minmax(auto, 400px) minmax(auto, 400px);
-    padding: 0 1em;
+  background: #9580a8;
+  display: grid;
+  justify-content: center;
+  grid-template: 1fr / minmax(auto, 1000px);
+  position: relative;
 }
 
 .simpleText {
-    padding: 8px 5px 9px;
-    font-family: sans-serif;
-    border: 1px solid #77608d;
-    border-top:none ;
-    border-bottom: none;
-    text-align: justify;
-    font-size: 16px;
+  font-family: sans-serif;
+  border-top: none;
+  background: #9580a8;
+  border-bottom: none;
+  text-align: justify;
+  position: sticky;
 }
 
-.simpleText span{
-    color: #f3cafd;
+.simpleText span {
+  color: #eae6eb;
 }
 
 h2 {
-    margin-top: 2px;
-    font-family: Arial;
-    font-size: 22px;
-    line-height: 25px;
-    font-weight: 400;
-    text-shadow:
-        -1px -1px #000,
-        0 1px 0 #444;
-    color: #fff;
-    transition: all 1s;
+  float: none;
+  margin-top: 2px;
+  font-family: Arial;
+  line-height: 25px;
+  font-weight: 400;
+  text-shadow: -1px -1px #000, 0 1px 0 #444;
+  color: #fff;
+  transition: all 1s;
 }
 
 h2:hover {
-    text-shadow:
-        -1px -1px #000,
-        0 1px 0 #444;
-    color: #c18acf;
+  text-shadow: -1px -1px #000, 0 1px 0 #444;
+  color: #c18acf;
+}
+
+/*media queries  */
+/* Small devices (mobile s, 320px and up) */
+@media (min-width: 320px) {
+    .container {
+      margin-top: 30px;
+      padding: 0 0.5em;
+    }
+    .simpleText {
+      padding: 4px 3px 2px;
+      font-size: 12px;
+      top: 31px;
+    }
+    h2 {
+      font-size: 17px;
+    }
+  }
+/* Small devices (landscape phones, 400px and up) */
+@media (min-width: 400px) {
+  .container {
+    margin-top: 30px;
+    padding: 0 0.5em;
+  }
+  .simpleText {
+    padding: 4px 3px 2px;
+    font-size: 12px;
+    top: 31px;
+  }
+  h2 {
+    font-size: 17px;
+  }
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .simpleText {
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    margin-top: 70px;
+    padding: 0 1em;
+  }
+  .simpleText {
+    padding: 8px 5px 9px;
+    border: 1px solid #77608d;
+    border-top: none;
+    border-bottom: none;
+    font-size: 16px;
+    top: 71px;
+  }
+  h2 {
+    font-size: 22px;
+  }
 }

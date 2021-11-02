@@ -1,39 +1,105 @@
 /*setting styles for aboutPage*/
 .container {
-    background: #9580a8;
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: center;
-    align-items:center;
-    grid-template: 1fr/ minmax(auto,600px) minmax(auto,600px) ;
-    padding: 20px 20px;
+  background: #9580a8;
+  display: grid;
 }
-.authorClassImg > img{
-    width: 420px;
-    border: #b2a4e7 solid 2px;
+.authorClassImg > img {
+  border: #b2a4e7 solid 2px;
 }
 
 .textInfo,
 .contactAutor {
-    font-family: revert;
-    font-size: 32px;
-    text-align: justify;
-    color:#f3cafd;
+  font-family: revert;
+  text-align: justify;
+  color: #fdf6ff;
 }
 
 .contactAutor a {
-    color: #b2a4e7;
-    text-decoration: none;
+  color: rgb(198 182 255);
+  text-decoration: none;
 }
 
 .contactAutor a:hover {
-    text-shadow:
-        0px 0px #5f4d71,
-        0 1px 0 #444;
-    color: #5f4d71;
+  text-shadow: 0px 0px #5f4d71, 0 1px 0 #444;
+  color: #5f4d71;
 }
 
-.authorClassImg{
-    display: grid;
+.authorClassImg {
+  display: grid;
+  justify-content: center;
+}
+
+/*media queries  */
+/* Small devices (mobile s, 320px and up) */
+@media (min-width: 320px) {
+  .container {
+    margin-top: 30px;
+    padding: 1em;
     justify-content: center;
+    grid-template: minmax(auto, 250px) minmax(auto, 200px) / 1fr;
+  }
+  .authorClassImg > img {
+    width: 190px;
+  }
+  .textInfo,
+  .contactAutor {
+    font-size: 14px;
+  }
+}
+/* Small devices (landscape phones, 400px and up) */
+@media (min-width: 400px) {
+  .container {
+    grid-template: minmax(auto, 280px) minmax(auto, 170px) / 1fr;
+  }
+  .authorClassImg > img {
+    width: 220px;
+  }
+}
+/* Small devices (landscape phones, 600px and up) */
+@media (min-width: 600px) {
+  .container {
+    margin-top: 30px;
+    grid-auto-flow: column;
+    justify-content: center;
+    grid-template: minmax(auto, 400px)  / minmax(auto, 600px) minmax(auto, 600px);
+    padding: 20px 20px;
+  }
+  .textInfo,
+  .contactAutor {
+    font-size: 16px;
+  }
+}
+/* Small devices (laptops phones, 768px and up) */
+@media (min-width: 768px) {
+  .authorClassImg > img {
+    width: 300px;
+  }
+  .textInfo,
+  .contactAutor {
+    font-size: 22px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    grid-template: minmax(auto, 590px)  / minmax(auto, 600px) minmax(auto, 600px);
+    margin-top: 70px;
+    align-items: center;
+  }
+  .authorClassImg > img {
+    width: 420px;
+  }
+  .textInfo,
+  .contactAutor {
+    font-size: 30px;
+  }
+}
+
+/* Large devices (large pc, 1440 and up) */
+@media (min-width: 1440) {
+  .textInfo,
+  .contactAutor {
+    font-size: 32px;
+  }
 }

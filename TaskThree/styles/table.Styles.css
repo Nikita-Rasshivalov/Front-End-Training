@@ -3,23 +3,21 @@
   display: grid;
   justify-content: center;
   align-content: center;
-  background: #917da5;
+  margin: 10%;
 }
 
 /*setting styles for table*/
-table {
+#tableForChange {
   font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
   font-size: 14px;
   border-collapse: collapse;
   text-align: center;
-  
 }
 
 th,
 td:first-child {
   background: #80abd0;
   color: white;
-  padding: 10px 20px;
 }
 
 th,
@@ -65,4 +63,61 @@ input[type="button"]:hover {
 input[type="button"]:active {
   box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6),
     inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+/*media queries  */
+/* Small devices (mobile s, 320px and up) */
+@media (min-width: 320px) {
+    #tableForChange{
+    width: 280px;
+    height: 163px;
+  }
+  input[value="300px"],
+  input[value="200px"],
+  input[value="100px"] {
+    pointer-events: none;
+  }
+  input[type="button"] {
+    border: 0;
+    line-height: 3.2;
+    padding: 0;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    width: 70px;
+  }
+  th,
+  td:first-child {
+    padding: 5px;
+  }
+  th:first-child,
+  td:first-child {
+    font-size: 14px;
+  }
+}
+
+/* Large devices (large pc, 1200px and up) */
+@media (min-width: 1200px) {
+  input[value="300px"],
+  input[value="200px"],
+  input[value="100px"] {
+    pointer-events: auto;
+  }
+
+  input[type="button"] {
+    border: 0;
+    line-height: 4;
+    padding: 0 20px;
+    font-size: 1rem;
+    width: 150px;
+  }
+
+  th,
+  td:first-child {
+    padding: 10px 20px;
+  }
+  #tableForChange{
+    width: 600px;
+    height: 200px;
+  }
 }
