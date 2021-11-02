@@ -2,44 +2,58 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
     <!-- Using styles and icons -->
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/indexStyle.css" />
     <link rel="shortcut icon" href="icons/icon.svg" />
     <title>Home page</title>
   </head>
-
   <body>
     <!-- Wrapper -->
     <div class="wrapper">
       <!-- Header page -->
       <header class="header">
-        <div class="header_info">
-          <p>Simple using of HTML5 CSS3 and a little bit JS for layout</p>
-          <img src="https://img.icons8.com/color/30/000000/html-5--v1.png" />
-          <img src="https://img.icons8.com/color/30/000000/css3.png" />
-          <img
-            src="https://img.icons8.com/color/30/000000/javascript--v1.png"
-          />
+        <div class="header_container">
+          <div class="header_body">
+            <div class="header_info">
+              <p>Simple using of HTML5 CSS3 and a little bit JS for layout</p>
+              <img
+                src="https://img.icons8.com/color/30/000000/html-5--v1.png"
+              />
+              <img src="https://img.icons8.com/color/30/000000/css3.png" />
+              <img
+                src="https://img.icons8.com/color/30/000000/javascript--v1.png"
+              />
+            </div>
+            <!-- Menu -->
+            <aside class="sidebar">
+              <nav class="sidebar_menu">
+                <ul class="sidebar_list">
+                  <li><a href="/index.html">Home</a></li>
+                  <li><a href="/tablePage.html">Table</a></li>
+                  <li><a href="/aboutPage.html">About</a></li>
+                </ul>
+              </nav>
+            </aside>
+            <a href="javascript:scroll(0,0)" class="forArrow"
+              ><i class="upArrow"></i
+            ></a>
+          </div>
         </div>
-        <!-- Menu -->
-        <aside class="sidebar">
-          <nav class="sidebar_menu">
-            <ul class="sidebar_list">
-              <li><a href="/index.html">Home</a></li>
-              <li><a href="/tablePage.html">Table</a></li>
-              <li><a href="/aboutPage.html">About</a></li>
-            </ul>
-          </nav>
-        </aside>
-        <a href="javascript:scroll(0,0)" class="forArrow"><i class="upArrow"></i></a>
       </header>
       <!-- Main part of page -->
       <main class="main">
         <!-- Container with information about site -->
         <article class="container">
-          <section  class="simpleText" itemscope itemtype="http://schema.org/SoftwareApplication">
+          <section
+            class="simpleText oneText"
+            itemscope
+            itemtype="http://schema.org/SoftwareApplication"
+          >
             <h2 itemprop="name">HTML</h2>
             <span itemprop="description">
               The HyperText Markup Language, or HTML is the standard markup
@@ -92,13 +106,14 @@
               debitis, animi natus magnam culpa, fuga modi maxime laborum porro?
               Perspiciatis, officia illum. Beatae repellat accusantium vel?
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit,
-              nobis? Reiciendis ex eius voluptate deleniti, nisi eveniet non
-              neque dolorem rerum ab sunt voluptas consequatur, id fuga
-              perspiciatis! Cupiditate, debitis?Lorem ipsum, dolor sit amet
-              consectetur adipisicing elit. 
+              nobis?
             </span>
           </section>
-          <section class="simpleText" itemscope itemtype="http://schema.org/SoftwareApplication">
+          <section
+            class="simpleText"
+            itemscope
+            itemtype="http://schema.org/SoftwareApplication"
+          >
             <h2 itemprop="name">CSS</h2>
             <span itemprop="description">
               Cascading Style Sheets (CSS) is a style sheet language used for
@@ -128,44 +143,14 @@
               dolor sit amet consectetur adipisicing elit. Maiores, omnis a
               officia labore debitis, animi natus magnam culpa, fuga modi maxime
               laborum porro? Perspiciatis, officia illum. Beatae repellat
-              accusantium vel? Lorem ipsum, dolor sit amet consectetur
-              adipisicing elit. Sit, nobis? Reiciendis ex eius voluptate
-              deleniti, nisi eveniet non neque dolorem rerum ab sunt voluptas
-              consequatur, id fuga perspiciatis! Cupiditate, debitis?Lorem
-              ipsum, dolor sit amet consectetur adipisicing elit. Maiores, omnis
-              a officia labore debitis, animi natus magnam culpa, fuga modi
-              maxime laborum porro? Perspiciatis, officia illum. Beatae repellat
-              accusantium vel? Lorem ipsum, dolor sit amet consectetur
-              adipisicing elit. Sit, nobis? Reiciendis ex eius voluptate
-              deleniti, nisi eveniet non neque dolorem rerum ab sunt voluptas
-              consequatur, id fuga perspiciatis! Cupiditate, debitis?Lorem
-              ipsum, dolor sit amet consectetur adipisicing elit. Maiores, omnis
-              a officia labore debitis, animi natus magnam culpa, fuga modi
-              maxime laborum porro? Perspiciatis, officia illum. Beatae repellat
-              accusantium vel? Lorem ipsum, dolor sit amet consectetur
-              adipisicing elit. Sit, nobis? Reiciendis ex eius voluptate
-              deleniti, nisi eveniet non neque dolorem rerum ab sunt voluptas
-              consequatur, id fuga perspiciatis! Cupiditate, debitis?Lorem ipsum, dolor sit amet
-              consectetur adipisicing elit. Maiores, omnis a officia labore
-              debitis, animi natus magnam culpa, fuga modi maxime laborum porro?
-              Perspiciatis, officia illum. Beatae repellat accusantium vel?
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit,
-              nobis? Reiciendis ex eius voluptate deleniti, nisi eveniet non
-              neque dolorem rerum ab sunt voluptas consequatur, id fuga
-              perspiciatis! Cupiditate, debitis?Lorem ipsum, dolor sit amet
-              consectetur adipisicing elit. Maiores, omnis a officia labore
-              debitis, animi natus magnam culpa, fuga modi maxime laborum porro?
-              Perspiciatis, officia illum. Beatae repellat accusantium vel?
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit,
-              nobis? Reiciendis ex eius voluptate deleniti, nisi eveniet non
-              neque dolorem rerum ab sunt voluptas consequatur, id fuga
-              perspiciatis! Cupiditate, debitis?Lorem ipsum, dolor sit amet
-              consectetur adipisicing elit. Maiores, omnis a officia labore
-              debitis, animi natus magnam culpa, fuga modi maxime laborum porro?
-              Perspiciatis, officia illum. 
+              accusantium vel? 
             </span>
           </section>
-          <section class="simpleText" itemscope itemtype="http://schema.org/SoftwareApplication">
+          <section
+            class="simpleText"
+            itemscope
+            itemtype="http://schema.org/SoftwareApplication"
+          >
             <h2 itemprop="name">JavaScript</h2>
             <span itemprop="description">
               JavaScript is a text-based programming language used both on the
@@ -211,28 +196,26 @@
               consectetur adipisicing elit. Sit, nobis? Reiciendis ex eius
               voluptate deleniti, nisi eveniet non neque dolorem rerum ab sunt
               voluptas consequatur, id fuga perspiciatis! Cupiditate, debitis?
-              Lorem ipsum, dolor sit amet
-              consectetur adipisicing elit. Maiores, omnis a officia labore
-              debitis, animi natus magnam culpa, fuga modi maxime laborum porro?
-              Perspiciatis, officia illum. Beatae repellat accusantium vel?
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit,
-              nobis? Reiciendis ex eius voluptate deleniti, nisi eveniet non
-              neque dolorem rerum ab sunt voluptas consequatur, id fuga
-              perspiciatis! Cupiditate, debitis?Lorem ipsum, dolor sit amet
-              consectetur adipisicing elit. Maiores, omnis a officia labore
-              debitis, animi natus magnam culpa, fuga modi maxime laborum porro?
-              Perspiciatis, officia illum. Beatae repellat accusantium vel?
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit,
-              nobis? Reiciendis ex eius voluptate deleniti, nisi eveniet non
-              neque dolorem rerum ab sunt voluptas consequatur, id fuga
-              perspiciatis! Cupiditate, debitis? Beatae repellat accusantium vel?
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit,
-              nobis? Reiciendis ex eius voluptate deleniti, nisi eveniet non
-              neque dolorem rerum ab sunt voluptas consequatur, id fuga
-              perspiciatis! Cupiditate, debitis?
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores,
+              omnis a officia labore debitis, animi natus magnam culpa, fuga
+              modi maxime laborum porro? Perspiciatis, officia illum. Beatae
+              repellat accusantium vel? Lorem ipsum, dolor sit amet consectetur
+              adipisicing elit. Sit, nobis? Reiciendis ex eius voluptate
+              deleniti, nisi eveniet non neque dolorem rerum ab sunt voluptas
+              consequatur, id fuga perspiciatis! Cupiditate, debitis?Lorem
+              ipsum, dolor sit amet consectetur adipisicing elit. Maiores, omnis
+              a officia labore debitis, animi natus magnam culpa, fuga modi
+              maxime laborum porro? Perspiciatis, officia illum. Beatae repellat
+              accusantium vel? Lorem ipsum, dolor sit amet consectetur
+              adipisicing elit. Sit, nobis? Reiciendis ex eius voluptate
+              deleniti, nisi eveniet non neque dolorem rerum ab sunt voluptas
+              consequatur, id fuga perspiciatis! Cupiditate, debitis? Beatae
+              repellat accusantium vel? Lorem ipsum, dolor sit amet consectetur
+              adipisicing elit. Sit, nobis? Reiciendis ex eius voluptate
+              deleniti, nisi eveniet non neque dolorem rerum ab sunt voluptas
+              consequatur, id fuga perspiciatis! Cupiditate, debitis?
             </span>
           </section>
-
         </article>
       </main>
       <!-- Page footer -->

@@ -30,15 +30,20 @@ body {
   color: #fff;
   z-index: 1;
 }
+.header_container{
+  width: 100%;
+}
+.header_body{
+  display: grid;
+  grid-template: 1fr 1fr /1fr minmax(auto,1000px) 1fr;
+  align-items: center;
+  justify-items: center;
+}
 
 .header_info {
   display: grid;
-  grid-column: 2/3;
-  grid-template:
-    1fr / 1fr
-    minmax(auto, 30px)
-    minmax(auto, 30px)
-    minmax(auto, 30px);
+  grid-column:2/3 ;
+  justify-content: center;
 }
 
 .header_info p {
@@ -123,12 +128,16 @@ body {
 .forArrow {
   grid-row: 2/2;
   grid-column: 1/2;
+  width: 100%;
+  height: 100%;
+  padding-left: 50%;
+  padding-top: 9px;
+}
+.forArrow:hover{
+  background: #c18acf;
+  cursor: pointer;
 }
 
-.upArrow:hover {
-  cursor: pointer;
-  border-width: 0 4px 4px 0;
-}
 
 /*media queries  */
 /* Small devices (mobils S, 320px and up) */
@@ -140,9 +149,8 @@ body {
       "main"
       "footer";
   }
-  .header {
-    grid-template: 1fr 1fr / 1fr minmax(auto, 500px) 1fr;
-    height: 30px;
+  .header_body{
+    grid-template: 1fr 1fr /1fr minmax(auto,1000px) 1fr;
   }
   .header_info {
     grid-template: 1fr / 1fr minmax(auto, 22px) minmax(auto, 22px) minmax(
@@ -175,15 +183,9 @@ body {
   .header_info p {
     font-size: 12px;
   }
-  .header {
-    grid-template: 1fr 1fr / 1fr minmax(auto, 600px) 1fr;
-  }
 }
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-  .header {
-    grid-template: 1fr 1fr / 1fr minmax(auto, 750px) 1fr;
-  }
   .header_info p {
     font-size: 18px;
   }
@@ -194,11 +196,8 @@ body {
 
 /*Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .header {
-    grid-template: 1fr 1fr / 1fr minmax(auto, 1000px) 1fr;
-  }
   .header_info {
-    grid-template: 1fr / 1fr minmax(auto, 30px) minmax(auto, 30px) minmax(
+    grid-template: 1fr / minmax(auto,470px) minmax(auto, 30px) minmax(auto, 30px) minmax(
         auto,
         30px
       );
@@ -214,10 +213,6 @@ body {
       "main"
       "footer";
   }
-  .header {
-    grid-template: 1fr 1fr / 1fr minmax(auto, 900px) 1fr;
-    height: 70px;
-  }
   .forArrow {
     display: block;
   }
@@ -231,10 +226,9 @@ body {
     width: 100px;
   }
 }
-
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1250px) {
-  .header {
-    grid-template: 1fr 1fr / 150px minmax(auto, 1200px) 1fr;
+  .header_body{
+    grid-template: 1fr 1fr /259px minmax(auto,1000px) 259px;
   }
 }
