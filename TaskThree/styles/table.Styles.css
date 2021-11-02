@@ -3,7 +3,7 @@
   display: grid;
   justify-content: center;
   align-content: center;
-  margin: 10%;
+  margin-top: 20%;
 }
 
 /*setting styles for table*/
@@ -68,7 +68,7 @@ input[type="button"]:active {
 /*media queries  */
 /* Small devices (mobile s, 320px and up) */
 @media (min-width: 320px) {
-    #tableForChange{
+  #tableForChange {
     width: 280px;
     height: 163px;
   }
@@ -96,6 +96,23 @@ input[type="button"]:active {
   }
 }
 
+@media (min-width: 500px) {
+  .container {
+    margin-top: 17%;
+  }
+}
+
+@media (min-width: 720px) {
+  .container {
+    margin-top: 12%;
+  }
+}
+@media (min-width: 900px){
+  .container {
+    margin-top: 9%;
+  }
+}
+
 /* Large devices (large pc, 1200px and up) */
 @media (min-width: 1200px) {
   input[value="300px"],
@@ -116,8 +133,11 @@ input[type="button"]:active {
   td:first-child {
     padding: 10px 20px;
   }
-  #tableForChange{
+  #tableForChange {
     width: 600px;
     height: 200px;
+  }
+  .container {
+    margin-top: 15%;
   }
 }

@@ -33,7 +33,7 @@
 /* Small devices (mobile s, 320px and up) */
 @media (min-width: 320px) {
   .container {
-    margin-top: 30px;
+    margin-top: 50px;
     padding: 1em;
     justify-content: center;
     grid-template: minmax(auto, 250px) minmax(auto, 200px) / 1fr;
@@ -58,7 +58,6 @@
 /* Small devices (landscape phones, 600px and up) */
 @media (min-width: 600px) {
   .container {
-    margin-top: 30px;
     grid-auto-flow: column;
     justify-content: center;
     grid-template: minmax(auto, 400px)  / minmax(auto, 600px) minmax(auto, 600px);

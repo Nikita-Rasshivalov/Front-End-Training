@@ -40,33 +40,18 @@ h2:hover {
 /* Small devices (mobile s, 320px and up) */
 @media (min-width: 320px) {
     .container {
-      margin-top: 30px;
       padding: 0 0.5em;
     }
     .simpleText {
       padding: 4px 3px 2px;
       font-size: 12px;
-      top: 31px;
+      top: 70px;
     }
     h2 {
       font-size: 17px;
     }
   }
-/* Small devices (landscape phones, 400px and up) */
-@media (min-width: 400px) {
-  .container {
-    margin-top: 30px;
-    padding: 0 0.5em;
-  }
-  .simpleText {
-    padding: 4px 3px 2px;
-    font-size: 12px;
-    top: 31px;
-  }
-  h2 {
-    font-size: 17px;
-  }
-}
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   .simpleText {
@@ -80,7 +65,6 @@ h2:hover {
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .container {
-    margin-top: 70px;
     padding: 0 1em;
   }
   .simpleText {
@@ -89,7 +73,6 @@ h2:hover {
     border-top: none;
     border-bottom: none;
     font-size: 16px;
-    top: 71px;
   }
   h2 {
     font-size: 22px;
