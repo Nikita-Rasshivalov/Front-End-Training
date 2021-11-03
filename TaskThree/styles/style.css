@@ -231,4 +231,7 @@ body {
   .header_body{
     grid-template: 1fr 1fr /259px minmax(auto,1000px) 259px;
   }
+  .footer {
+    font-size: 18px;
+  }
 }
