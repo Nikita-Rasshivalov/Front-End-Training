@@ -1,24 +1,27 @@
-// main: ./style.less
+//Func to change size
+@function multiply-by-one-and-half($number) {
+    @return $number * 1.5;
+  }
 /*setting styles for aboutPage*/
 .container--about {
-    background: @wrapperBgColor;
+    background: $wrapperBgColor;
     display: grid;
-    @media @min320 {
+    @media #{$min320} {
         margin-top: 50px;
         padding: 1em;
         justify-content: center;
         grid-template: minmax(auto, 250px) minmax(auto, 200px) / 1fr;
     }
-    @media @min400 {
+    @media #{$min400} {
         grid-template: minmax(auto, 280px) minmax(auto, 170px) / 1fr;
     }
-    @media @min600 {
+    @media #{$min600} {
         grid-auto-flow: column;
         justify-content: center;
         grid-template: minmax(auto, 400px) / minmax(auto, 600px) minmax(auto, 600px);
         padding: 20px 20px;
     }
-    @media @min992 {
+    @media #{$min992} {
         grid-template: minmax(auto, 590px) / minmax(auto, 600px) minmax(auto, 600px);
         margin-top: 70px;
         align-items: center;
@@ -32,7 +35,7 @@
     color: #fdf6ff;
 
     a {
-        color: rgb(198 182 255);
+        color: 	#C6B6FF;
         text-decoration: none;
 
         &:hover {
@@ -40,20 +43,20 @@
             color: #5f4d71;
         }
     }
-    @media @min320 {
-        font-size: 14px;
+    @media #{$min320} {
+        font-size: #{multiply-by-one-and-half(9)}px;
     }
-    @media @min600 {
+    @media #{$min600} {
         font-size: 16px;
     }
-    @media @min768 {
+    @media #{$min768} {
         font-size: 22px;
     }
-    @media @min992 {
+    @media #{$min992} {
         font-size: 30px;
     }
-    @media @min1250 {
-        font-size: 32px;
+    @media #{$min1250} {
+        font-size: #{multiply-by-one-and-half(22.5)}px;
     }
 }
 
@@ -63,16 +66,16 @@
 
     &>img {
         border: #b2a4e7 solid 2px;
-        @media @min320 {
+        @media #{$min320}  {
             width: 190px;
         }
-        @media @min400 {
+        @media #{$min400}{
             width: 220px; 
         }
-        @media @min768 {
+        @media #{$min768}{
             width: 300px;
         }
-        @media @min992 {
+        @media#{$min992} {
             width: 420px;
         }
     }

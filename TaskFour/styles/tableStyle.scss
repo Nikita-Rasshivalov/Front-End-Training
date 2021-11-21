@@ -1,5 +1,20 @@
-// main: ./style.less
-@min1200: ~"(min-width: 1200px)";
+//Func to change size
+@function GetSquare($number) {
+  @return $number * $number;
+}
+//Mixins
+@mixin WidthHeight($width,$height) {
+  width: $width;
+  height: $height;
+}
+
+$i: 6;
+@while $i > 0 {
+  .item-#{$i} {
+    width: 2em * $i;
+  }
+  $i: $i - 2;
+}
 
 /*setting styles for tablePage*/
 .container--table {
@@ -8,6 +23,7 @@
   align-content: center;
   margin-top: 20%;
 
+  
   @media (min-width: 500px) {
     margin-top: percentage(0.17);
   }
@@ -20,7 +36,7 @@
     margin-top: percentage(0.09);
   }
 
-  @media @min1200 {
+  @media #{$min1200} {
     margin-top: percentage(0.12);
   }
 }
@@ -32,14 +48,27 @@
   border-collapse: collapse;
   text-align: center;
 
-  @media @min320 {
-    width: 280px;
-    height: 163px;
+  @media #{$min320} {
+    @include WidthHeight(280px,163px );
+    display: none;
   }
 
-  @media @min1200 {
-    width: 600px;
-    height: 200px;
+  @media #{$min768} {
+    @include WidthHeight(280px,163px );
+    display: table;
+  }
+
+  @media #{$min1200} {
+    @include WidthHeight(600px,200px );
+  }
+}
+
+.ErrMessage{
+  @media #{$min320} {
+    display: block;
+  }
+  @media #{$min768} {
+    display: none;
   }
 }
 
@@ -48,11 +77,11 @@ td:first-child {
   background: #80abd0;
   color: white;
 
-  @media @min320 {
+  @media #{$min320} {
     padding: 5px;
   }
 
-  @media @min1200 {
+  @media #{$min1200} {
     padding: 10px 20px;
   }
 }
@@ -65,21 +94,21 @@ td {
 }
 
 td {
-  background: @wrapperBgColor;
+  background: $wrapperBgColor;
 }
 
 th:first-child,
 td:first-child {
   text-align: left;
 
-  @media @min320 {
+  @media #{$min320} {
     font-size: 14px;
   }
 }
 
 input[type="button"] {
   border: 0;
-  line-height: 4;
+  line-height: #{multiply-by-one-and-half(2)};
   padding: 0 20px;
   font-size: 1rem;
   text-align: center;
@@ -87,14 +116,16 @@ input[type="button"] {
   width: 150px;
   text-shadow: 1px 1px 1px #000;
   background-color: #b194ca;
-  background-image: linear-gradient(to top left,
-      rgba(0, 0, 0, 0.2),
-      rgba(0, 0, 0, 0.2) 50%,
-      rgba(0, 0, 0, 0));
+  background-image: linear-gradient(
+    to top left,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0)
+  );
   box-shadow: inset 2px 1px 1px rgba(255, 255, 255, 0.6),
     inset -2px -2px 3px rgba(0, 0, 0, 0.6);
 
-  @media @min320 {
+  @media #{$min320} {
     border: 0;
     line-height: 3.2;
     padding: 0;
@@ -104,7 +135,7 @@ input[type="button"] {
     width: 70px;
   }
 
-  @media @min1200 {
+  @media #{$min1200} {
     border: 0;
     line-height: 4;
     padding: 0 20px;
@@ -122,17 +153,3 @@ input[type="button"]:active {
     inset 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
-@media (min-width: 320px) {
-
-  input[value="300px"],
-  input[value="200px"],
-  input[value="100px"] {
-    @media @min320 {
-      pointer-events: none;
-    }
-
-    @media @min1200 {
-      pointer-events: auto;
-    }
-  }
-}
