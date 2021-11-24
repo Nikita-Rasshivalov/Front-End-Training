@@ -20,9 +20,14 @@ if (document.querySelector("input[name=calcType]")) {
 		});
 	});
 }
+
 //Check checkbox
-priority.addEventListener("change", () => {
-	if (!this.checked) flag = false;
+priority.addEventListener("change", function(){
+	if (!this.checked){
+		flag = false;
+	} else{
+		flag = true;
+	}
 	result.innerText = "";
 });
 
@@ -46,10 +51,9 @@ calc.addEventListener("click", (event) => {
 				JSonArray.push(result.innerText);
 				if (result.innerText != "")
 					if (flag == true) {
-						result.innerText =
-							radioBtnsValue == DoubleNum	? eval(result.innerText) : Math.floor(eval(result.innerText));
+						result.innerText = radioBtnsValue == DoubleNum	? eval(result.innerText) : Math.floor(eval(result.innerText));
 					} else {
-						result.innerText = WithoutPriority(result.innerText);
+						result.innerText = radioBtnsValue == DoubleNum	? WithoutPriority(result.innerText) : Math.floor(WithoutPriority(result.innerText));
 					}
 				break;
 			case back:
@@ -73,6 +77,7 @@ let WithoutPriority = (result) => {
 	let reForSumbols = /[*/+-]/gi;
 	let numbers = result.match(reForNumbers);
 	let symbols = result.match(reForSumbols);
+
 	result = numbers[0];
 	for (let i = 0; i < symbols.length; i++) {
 		result = eval(result + symbols[i] + numbers[i + 1]);
