@@ -1,15 +1,29 @@
 const calc = document.querySelector('.calc');
 const result =  document.querySelector('.result');
+const dotBtn = document.querySelector('.dot');
 const back = document.querySelector('.back').innerText;
 const JsonSender = document.querySelector('.JsonSender');
-
+//Array for sending json
 let JSonArray = [];
+
+if (document.querySelector('input[name=calcType]')) {
+    document.querySelectorAll('input[name=calcType]').forEach((elem) => {
+      elem.addEventListener("change", function(event) {
+        let item = event.target.value;
+        let intNum  =  'Integer';
+        dotBtn.style.pointerEvents = (item === intNum) ? 'none':'auto'
+      });
+    });
+  }
 
 // calculator functions processing
 calc.addEventListener('click',(event)=>{
+    let DoubleNum  =  'Double';
+    //Get radio values
+    let radioBtns = document.querySelector("input[name=calcType]:checked");
+    let radioBtnsValue = radioBtns ? radioBtns.value : "";
 
     if(!event.target.classList.contains('item__btn')) return
-
     const value = event.target.innerText; 
     try {
         switch(value){
@@ -19,13 +33,12 @@ calc.addEventListener('click',(event)=>{
             case '=':
                 if(result.innerText.search(/[^0-9*/+-.()]/mi) != -1) return
                 JSonArray.push(result.innerText);
-                result.innerText = eval(result.innerText).toFixed(1);
+                if( result.innerText != ''){
+                    result.innerText = (radioBtnsValue == DoubleNum) ? math.evaluate(result.innerText) : Math.floor(math.evaluate(result.innerText));
+                }
                 break;
             case back:
                 result.innerText = result.innerText.substring(0,result.innerText.length-1)
-                break;
-            case JsonSender:
-                sendJson(JSonArray);
                 break;
             default:
                 result.innerText += value;

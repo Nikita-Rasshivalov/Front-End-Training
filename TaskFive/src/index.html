@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/style.css" />
+	<script src="scripts/scripts.js"></script>
     <title>Calculator</title>
   </head>
   <body>
     <div class="wrapper">
-
       <div class="calc container">
         <div class="result"></div>
 
@@ -35,11 +35,42 @@
 
         <div class="item__btn equal">=</div>
         <div class="item__btn zero">0</div>
-        <div class="item__btn">.</div>
+        <div class="item__btn dot">.</div>
         <div class="item__btn">(</div>
       </div>
       <div class="JsonSender">Send JSon</div>
+      <form class="NumberForm">
+        <fieldset>
+          <legend>Please select your preferred calc method:</legend>
+          <div class="radio-btns">
+            <div>
+              <input
+                type="radio"
+                id="calcInt"
+                name="calcType"
+                value="Integer"
+              />
+              <label for="calcInt">Integer</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="calcDouble"
+                name="calcType"
+                value="Double"
+                checked
+              />
+              <label for="calcDouble">Double</label>
+            </div>
+          </div>
+          <div class="box-btns">
+            <div>
+              <input type="checkbox" id="priority" name="priority" checked />
+              <label for="priority">Priority calculations</label>
+            </div>
+          </div>
+        </fieldset>
+      </form>
     </div>
-    <script src="/scripts/scripts.js"></script>
   </body>
 </html>
