@@ -16,14 +16,14 @@ if (document.querySelector("input[name=calcType]")) {
 			let item = event.target.value;
 			let intNum = "Integer";
 			dotBtn.style.pointerEvents = item === intNum ? "none" : "auto";
-			result.innerText = '';
+			result.innerText = "";
 		});
 	});
 }
 //Check checkbox
 priority.addEventListener("change", () => {
 	if (!this.checked) flag = false;
-	result.innerText = '';
+	result.innerText = "";
 });
 
 // calculator functions processing
@@ -44,7 +44,6 @@ calc.addEventListener("click", (event) => {
 			case "=":
 				if (result.innerText.search(/[^0-9*/+-.()]/im) != -1) return;
 				JSonArray.push(result.innerText);
-
 				if (result.innerText != "")
 					if (flag == true) {
 						result.innerText =
@@ -54,13 +53,13 @@ calc.addEventListener("click", (event) => {
 					}
 				break;
 			case back:
-				result.innerText = result.innerText.substring(
-					0,
-					result.innerText.length - 1
-				);
+				// backspace
+				result.innerText = result.innerText.substring(0, result.innerText.length - 1);
 				break;
-			default:
+			default:			
 				result.innerText += value;
+				// prohibition of entering the same characters
+				result.innerText = result.innerText.replace(/([*/+-.])\1/g,"");
 		}
 	} catch (err) {
 		result.innerText = "";
