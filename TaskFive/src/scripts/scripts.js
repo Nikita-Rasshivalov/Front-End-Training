@@ -34,7 +34,7 @@ calc.addEventListener('click',(event)=>{
                 if(result.innerText.search(/[^0-9*/+-.()]/mi) != -1) return
                 JSonArray.push(result.innerText);
                 if( result.innerText != ''){
-                    result.innerText = (radioBtnsValue == DoubleNum) ? math.evaluate(result.innerText) : Math.floor(math.evaluate(result.innerText));
+                    result.innerText = (radioBtnsValue == DoubleNum) ? eval(result.innerText) : Math.floor(eval(result.innerText));
                 }
                 break;
             case back:
