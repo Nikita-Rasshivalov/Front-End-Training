@@ -12,16 +12,18 @@ let JSonArray = [];
 //Check radio btn
 if (document.querySelector("input[name=calcType]")) {
 	document.querySelectorAll("input[name=calcType]").forEach((elem) => {
-		elem.addEventListener("change", function (event) {
+		elem.addEventListener("change", (event) => {
 			let item = event.target.value;
 			let intNum = "Integer";
 			dotBtn.style.pointerEvents = item === intNum ? "none" : "auto";
+			result.innerText = '';
 		});
 	});
 }
 //Check checkbox
 priority.addEventListener("change", () => {
 	if (!this.checked) flag = false;
+	result.innerText = '';
 });
 
 // calculator functions processing
@@ -68,7 +70,7 @@ calc.addEventListener("click", (event) => {
 // Calc without priority
 let WithoutPriority = (result) => {
 	result = result.replace(/[{()}]/g, "");
-	let reForNumbers = /[0-9]/gi;
+	let reForNumbers = /\d+/g;
 	let reForSumbols = /[*/+-]/gi;
 	let numbers = result.match(reForNumbers);
 	let symbols = result.match(reForSumbols);
