@@ -93,8 +93,8 @@ let sauces = [];
 let spices = [];
 
 //set pizza base
-if (document.querySelector("input[name=pizzaBase]")) {
-    document.querySelectorAll("input[name=pizzaBase]").forEach((elem) => {
+if (document.querySelector(".pizzaBase-container")) {
+    document.querySelectorAll("input[name=pizzaBase]").forEach( function(elem) {
         elem.addEventListener("change", (event) => {
             let item = event.target.value;
             switch (item) {
@@ -194,9 +194,10 @@ if (document.querySelector(".spices-container")) {
         });
     });
 }
+
+let pizza = new Pizza(pizzaBase, products, sauces, spices);
 //#endregion
 
 
 
-let pizza = new Pizza(pizzaBase, products, sauces, spices);
 
