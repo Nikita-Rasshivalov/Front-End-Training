@@ -23,6 +23,9 @@ class PuffBase extends PizzaBase{
     get price() {
         return 22;
     }
+    get baseName() {
+        return "PuffBase";
+    }
 }
 class ThickBase extends PizzaBase{
     get calories() {
@@ -30,6 +33,9 @@ class ThickBase extends PizzaBase{
     }
     get price() {
         return 21;
+    }
+    get baseName() {
+        return "ThickBase";
     }
 }
 class СalzoneBase extends PizzaBase{
@@ -39,6 +45,9 @@ class СalzoneBase extends PizzaBase{
     get price() {
         return 55;
     }
+    get baseName() {
+        return "СalzoneBase";
+    }
 }
 class ThinBase extends PizzaBase{
     get calories() {
@@ -46,6 +55,9 @@ class ThinBase extends PizzaBase{
     }
     get price() {
         return 15;
+    }
+    get baseName() {
+        return "ThinBase";
     }
 }
 
@@ -68,6 +80,9 @@ class Meat extends Product{
     get calories() {
         return 24;
     }
+    get name() {
+        return "Meat";
+    }
 }
 
 class Chease extends Product{
@@ -76,6 +91,9 @@ class Chease extends Product{
     }
     get calories() {
         return 14;
+    }
+    get name() {
+        return "Chease";
     }
 }
 
@@ -86,6 +104,9 @@ class Sausage extends Product{
     get calories() {
         return 25;
     }
+    get name() {
+        return "Sausage";
+    }
 }
 
 class Olives extends Product{
@@ -95,6 +116,10 @@ class Olives extends Product{
     get calories() {
         return 17;
     }
+    get name() {
+        return "Olives";
+    }
+    
 }
 
 // Sauces
@@ -114,6 +139,9 @@ class Barbeku extends Sauces{
     get price() {
         return 15;
     }
+    get name() {
+        return "Barbeku";
+    }
 }
 
 class SweetAndSour extends Sauces{
@@ -123,6 +151,9 @@ class SweetAndSour extends Sauces{
     get price() {
         return 14;
     }
+    get name() {
+        return "SweetAndSour";
+    }
 }
 class Garlic extends Sauces{
     get calories() {
@@ -131,6 +162,9 @@ class Garlic extends Sauces{
     get price() {
         return 16;
     }
+    get name() {
+        return "Garlic";
+    }
 }
 class Teriyaki extends Sauces{
     get calories() {
@@ -138,6 +172,9 @@ class Teriyaki extends Sauces{
     }
     get price() {
         return 12;
+    }
+    get name() {
+        return "Teriyaki";
     }
 }
 
@@ -157,6 +194,9 @@ class Rosemary extends Spices{
     get calories() {
         return 12;
     } 
+    get name() {
+        return "Rosemary";
+    }
 }
 
 class Basilic extends Spices{
@@ -166,6 +206,9 @@ class Basilic extends Spices{
     get calories() {
         return 10;
     } 
+    get name() {
+        return "Basilic";
+    }
 }
 
 class Oregano extends Spices{
@@ -175,5 +218,8 @@ class Oregano extends Spices{
     get calories() {
         return 20;
     } 
+    get name() {
+        return "Oregano";
+    }
 }
 
