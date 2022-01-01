@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">
+        <p>field one:</p>
+        <div class="fieldOne"></div>
+      </div>
+      <div class="item">
+        <p>field two:</p>
+        <div class="fieldTwo"></div>
+      </div>
+      <div class="item">
+        <p>field three:</p>
+        <div class="fieldThree"></div>
+      </div>
+      <div class="item">
+        <p>field four:</p>
+        <div class="fieldFour">
+          <div class="statusFieldOne"></div>
+          <div class="statusFieldTwo"></div>
+          <div class="statusFieldThree"></div>
+        </div>
+      </div>
+      <div class="item">
+        <p>field five:</p>
+        <div class="fieldFive">
+          <form>
+            <div class="nested-items">
+              <label for="eventDate">Date</label>
+              <input type="date" name="eventDate" />
+            </div>
+            <div class="nested-items">
+              <label for="eventTime">Time (minutes)</label>
+              <input type="number" min="0" name="eventTime" />
+            </div>
+            <div class="nested-items">
+              <label for="eventName">Name</label>
+              <input type="text" name="eventName" />
+            </div>
+            <div class="nested-items">
+              <label for="importance">Importance</label>
+              <select name="importance">
+                <option value="low">low</option>
+                <option value="middle">middle</option>
+                <option value="high">high</option>
+              </select>
+            </div>
+            <div class="nested-items">
+              <label for="discription">Discription</label>
+              <input type="text" name="discription" />
+            </div>
+            <div class="nested-items">
+              <label>Send data</label>
+              <input type="submit" id="sendReqbtn" value="Send" />
+            </div>
+            <div class="nested-items">
+              <label>Choose file for upload</label>
+              <select class="uploadSelect">
+                <option selected disabled>choose file</option>
+                <option value="rasshivalov_data1.json">
+                  rasshivalov_data1.json
+                </option>
+                <option value="rasshivalov_data2.json">
+                  rasshivalov_data2.json
+                </option>
+                <option value="rasshivalov_data3.json">
+                  rasshivalov_data3.json
+                </option>
+              </select>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/scripts.js"></script>
+  </body>
+</html>

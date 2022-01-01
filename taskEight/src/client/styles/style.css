@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    border: 2px solid rgba(0,0,0,0.2);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 7.5rem;
+}
+
+.nested-items{
+    display: flex;
+    flex-direction: column;
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+input{
+    width: 220px;
+    border-radius: 3px;
+}
+
+.fieldFive{
+    padding-bottom: 1em ;
+}
