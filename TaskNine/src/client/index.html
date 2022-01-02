@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <div class="items">
+          <label for="name">ID</label>
+          <input type="text" name="id" />
+        </div>
+        <div class="items">
+          <label for="firstName">Name</label>
+          <input type="text" name="firstName" />
+        </div>
+        <div class="items">
+          <label for="secondName">Surname</label>
+          <input type="text" name="secondName" />
+        </div>
+        <div class="items">
+          <label for="age">Age</label>
+          <input type="text" name="age" />
+        </div>
+        <div class="items">
+          <label for="speciality">Speciality</label>
+          <input type="text" name="speciality" />
+        </div>
+        <div class="items-btn">
+          <input type="submit" class="prevBtn" value="Prev" />
+          <input type="submit" class="insBtn" value="Insert" />
+          <input type="submit" class="editBtn" value="Edit" />
+          <input type="submit" class="nextBtn" value="Next" />
+          <input type="submit" class="delBtn" value="Del" />
+        </div>
+      </form>
+      <div class="error"></div>
+    </div>
+    <script src="scripts/scripts.js"></script>
+  </body>
+</html>
