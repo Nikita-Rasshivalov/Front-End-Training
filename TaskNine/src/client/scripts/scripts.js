@@ -17,8 +17,9 @@ const firstName = document.querySelector("input[name=firstName]");
 const secondName = document.querySelector("input[name=secondName]");
 const age = document.querySelector("input[name=age]");
 const speciality = document.querySelector("input[name=speciality]");
-const nextBtn = document.querySelector(".nextBtn")
-const prevBtn = document.querySelector(".prevBtn")
+const nextBtn = document.querySelector(".nextBtn");
+const prevBtn = document.querySelector(".prevBtn");
+const allContainer = document.querySelector(".all-container");
 
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -42,7 +43,7 @@ async function sendRequest(method, url, body = null) {
             response = await fetch(url);
             break;
         case 'DELETE':
-            response = await fetch(url, {method:method});
+            response = await fetch(url, { method: method });
             break;
         case 'PUT':
             response = await fetch(url, {
@@ -55,7 +56,7 @@ async function sendRequest(method, url, body = null) {
             response = await fetch(url, {
                 method: method,
                 body: JSON.stringify(body),
-                headers: headers
+                headers: headers,
             });
             break;
         default:
@@ -72,8 +73,26 @@ function getStudents() {
             data => {
                 let currentCounter = 0;
                 outInfo(data, currentCounter);
+                OutAllStudents(data.body.students);
             })
         .catch(err => console.log(err));
+}
+
+//Out all Students
+function OutAllStudents(students) {
+    students.forEach(elem => {
+        let studentUl = document.createElement('ul');
+        let studentLi = document.createElement('li');
+        let elemLi = `
+        Id: ${elem.id}, 
+        FirstName: ${elem.firstName}, 
+        SecondName: ${elem.secondName}, 
+        Age: ${elem.age}, 
+        Speciality: ${elem.speciality}`
+        studentLi.appendChild(document.createTextNode(elemLi));
+        studentUl.appendChild(studentLi);
+        allContainer.appendChild(studentUl);
+    });
 }
 
 
@@ -84,7 +103,7 @@ function getStudents() {
  */
 
 function outInfo(data, currentCounter) {
-    let body = data.body;
+    let body = data.body.students;
     let clicked = false;
     if (!clicked) {
         outCurrentStud(body[currentCounter])
@@ -129,8 +148,8 @@ document.querySelector(".editBtn").addEventListener('click', (event) => {
         obj[key] = value;
     });
     sendRequest('PUT', requestUrlChange + id.value, obj)
-        .then(data => alert("Object with id:" + data.body.id + " has been updated"))
-        .catch(err => alert("Incorrect id"))
+        .then(data => alert(data.body.message))
+        .catch(err => alert(err))
 });
 
 //insert data
@@ -143,8 +162,8 @@ document.querySelector(".insBtn").addEventListener('click', (event) => {
     });
     obj.id = uuidv4();
     sendRequest('POST', requestUrl, obj)
-        .then(data => alert("Object with id:" + data.body.id + " has been added"))
-        .catch(err => alert("Incorrect id"))
+        .then(data => alert(data.body.message))
+        .catch(err => alert(err))
 });
 
 
@@ -152,7 +171,7 @@ document.querySelector(".insBtn").addEventListener('click', (event) => {
 document.querySelector(".delBtn").addEventListener('click', (event) => {
     event.preventDefault();
     sendRequest('DELETE', requestUrlChange + id.value)
-        .then(data => alert("Object with id:" + id.value + " has been deleted"))
+        .then(data => alert(data.body.message))
         .catch(err => alert(err))
 });
 
