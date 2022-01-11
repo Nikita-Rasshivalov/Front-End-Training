@@ -59,7 +59,7 @@ async function sendRequest(method, url, body = null) {
         response = await fetch(url);
     }
     const data = await response.json();
-    if (response.ok) return ({ status: response.status,statusText:response.statusText, url: response.url, body: data });
+    if (response.ok) return ({ status: response.status,statusText:response.statusText, url: response.url, body: data});
 
 }
 
@@ -69,15 +69,16 @@ async function sendRequest(method, url, body = null) {
  * @param {statusField} statusField
  * @param {data} data
  */
-function outInfo(field, statusField, data) {
+function outInfo(field, statusField, data,counter = null) {
     let body = data.body;
     field.innerHTML = `
     event date: ${body.eventDate};  
     event time: ${body.eventTime} min; 
     event name: ${body.eventName}; 
     importance: ${body.importance};  
-    discription: ${body.discription};`
-    statusField.innerHTML = `status: ${data.status} ${data.statusText}; url:${data.url}`;
+    discription: ${body.discription};
+    updating: ${counter/1000} seconds;`
+    statusField.innerHTML = `status: ${data.status} ${data.statusText}; url:${data.url}; counter:${counter/1000} seconds`;
 }
 /**
  * Display information for field one
@@ -89,12 +90,12 @@ function printFieldOne(from) {
         sendRequest('GET', requestUrl_fieldOne)
             .then(
                 data => {
-                    outInfo(fieldOne, statusFieldOne, data);
+                    outInfo(fieldOne, statusFieldOne, data,current);
                     setTimeout(go, current);
                 })
             .catch(err => console.log(err));
         current += 2000;
-    }, 1000);
+    }, 3000);
 }
 /**
  * Display information for field two
@@ -106,12 +107,12 @@ function printFieldTwo(from) {
         sendRequest('GET', requestUrl_fieldTwo)
             .then(
                 data => {
-                    outInfo(fieldTwo, statusFieldTwo, data);
+                    outInfo(fieldTwo, statusFieldTwo, data,current);
                     setTimeout(go, current);
                 })
             .catch(err => console.log(err));
         current += 2000;
-    }, 2000);
+    }, 4000);
 }
 
 /**
@@ -124,12 +125,12 @@ function printFieldThree(from) {
         sendRequest('GET', requestUrl_fieldThree)
             .then(
                 data => {
-                    outInfo(fieldThree, statusFieldThree, data);
+                    outInfo(fieldThree, statusFieldThree, data,current);
                     setTimeout(go, current);
                 })
             .catch(err => console.log(err));
         current += 2000;
-    }, 3000);
+    }, 5000);
 }
 
 /**
